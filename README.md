@@ -28,13 +28,18 @@ Gemini CLI, Zed, Cline, Continue, JetBrains AI** and more:
 
 ## What's in this repo
 
-`server.py` — a **zero-dependency stdio bridge** (Python 3.9+, stdlib only) for
-clients that speak MCP over stdio and can't send HTTP headers. It forwards every
-JSON-RPC message to the hosted endpoint over TLS and streams responses back:
+A **zero-dependency stdio bridge** for clients that speak MCP over stdio and
+can't send HTTP headers — in two flavours: `bin/cli.mjs` (Node 18+, published as
+[`@getappniche/mcp`](https://www.npmjs.com/package/@getappniche/mcp)) and
+`server.py` (Python 3.9+, stdlib only). Both forward every JSON-RPC message to
+the hosted endpoint over TLS and stream responses back.
 
 ```bash
-export GETAPPNICHE_API_KEY="getappniche_..."
-python3 server.py
+# Node — one-liner, no install
+GETAPPNICHE_API_KEY="getappniche_..." npx -y @getappniche/mcp
+
+# Python — no dependencies
+GETAPPNICHE_API_KEY="getappniche_..." python3 server.py
 ```
 
 Claude Desktop (`claude_desktop_config.json`):
@@ -43,13 +48,17 @@ Claude Desktop (`claude_desktop_config.json`):
 {
   "mcpServers": {
     "getappniche": {
-      "command": "python3",
-      "args": ["/absolute/path/to/server.py"],
+      "command": "npx",
+      "args": ["-y", "@getappniche/mcp"],
       "env": { "GETAPPNICHE_API_KEY": "getappniche_..." }
     }
   }
 }
 ```
+
+`server.json` is the manifest published to the
+[official MCP registry](https://registry.modelcontextprotocol.io) as
+`com.getappniche/mcp`.
 
 Being ~150 readable lines, it doubles as a **reference for what travels over the
 wire**: your API key goes only into the `Authorization` header of TLS requests

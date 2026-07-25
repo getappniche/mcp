@@ -1,0 +1,41 @@
+{
+  "name": "@getappniche/mcp",
+  "version": "0.1.0",
+  "description": "GetAppNiche MCP — live App Store & Google Play data for AI agents: app discovery, ASO keyword scoring, reviews. Zero-dependency stdio bridge to the hosted Streamable HTTP endpoint.",
+  "type": "module",
+  "bin": {
+    "getappniche-mcp": "bin/cli.mjs"
+  },
+  "files": [
+    "bin",
+    "server.py",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getappniche/mcp.git"
+  },
+  "homepage": "https://getappniche.com/mcp",
+  "bugs": {
+    "url": "https://github.com/getappniche/mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "app-store",
+    "google-play",
+    "aso",
+    "app-store-optimization",
+    "claude",
+    "ai-agents",
+    "app-intelligence"
+  ],
+  "author": "GetAppNiche <yaro@getappniche.com> (https://getappniche.com)",
+  "license": "MIT",
+  "mcpName": "com.getappniche/mcp"
+}
