@@ -103,9 +103,13 @@ Companion agent skills:
 [`getappniche/aso-skills`](https://github.com/getappniche/aso-skills)
 (`npx skills add getappniche/aso-skills`).
 
-> ChatGPT and claude.ai on the web can't send a custom `Authorization` header
-> from their connector UI yet, so use one of the clients above. OAuth for those
-> is in progress.
+**ChatGPT** — Settings → Connectors → create a custom connector (Developer
+mode), point it at `https://api.getappniche.com/mcp` and pick **API key**
+authentication, then paste your key.
+
+> claude.ai on the web documents request-header auth, but its connector UI
+> currently exposes only OAuth fields — until that settles, use one of the
+> clients above.
 
 ## What's in this repo
 
