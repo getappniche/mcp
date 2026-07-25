@@ -66,13 +66,13 @@ to `api.getappniche.com` — nothing else, nowhere else.
 
 ## Tools
 
-- **`search_apps`** — Search & filter apps by store, category, text, ratings, growth. *1 credit*
-- **`get_app_detail`** — One app by `apple:284882215` / `google:com.duolingo`. *1 credit*
-- **`get_app_historicals`** — Metric time-series: reviews, ratings, downloads, revenue. *1 credit*
-- **`get_keyword_difficulty`** — Popularity, difficulty, traffic & opportunity for a keyword. *10 credits*
-- **`batch_keyword_difficulty`** — Up to 10 keywords, auto-sorted by opportunity. *10 credits / kw*
-- **`get_app_reviews`** — Enriched review feed for apps monitored in your workspace. *1 credit*
-- **`get_supported_countries`** — Valid store country codes. *Free*
+- `search_apps` - Search and filter apps by store, category, text, ratings and growth (1 credit)
+- `get_app_detail` - Get one app by id, e.g. `apple:284882215` or `google:com.duolingo` (1 credit)
+- `get_app_historicals` - Metric time series: reviews, ratings, downloads, revenue (1 credit)
+- `get_keyword_difficulty` - Popularity, difficulty, traffic and opportunity for a keyword (10 credits)
+- `batch_keyword_difficulty` - Score up to 10 keywords, sorted by opportunity (10 credits per keyword)
+- `get_app_reviews` - Enriched review feed for apps monitored in your workspace (1 credit)
+- `get_supported_countries` - List valid store country codes (free)
 
 Credits ship with a GetAppNiche plan (Pro: 5,000/month) and every result reports
 `credits_charged`. Rate limit: 60 requests/minute per key.
