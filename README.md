@@ -13,18 +13,99 @@ https://api.getappniche.com/mcp        Streamable HTTP · JSON-RPC 2.0
 Authorization: Bearer YOUR_API_KEY     app.getappniche.com → Settings → API Keys
 ```
 
-One-line connect for Claude Code:
+## Setup per client
+
+**Claude Code** — one command, no restart:
 
 ```bash
 claude mcp add --transport http getappniche https://api.getappniche.com/mcp \
   --header "Authorization: Bearer YOUR_API_KEY"
 ```
 
-Copy-paste setup for **Cursor, Claude Desktop, Windsurf, VS Code, Codex CLI,
-Gemini CLI, Zed, Cline, Continue, JetBrains AI** and more:
-[getappniche.com/mcp](https://getappniche.com/mcp). Companion agent skills:
+**Cursor** — `.cursor/mcp.json` (project) or `~/.cursor/mcp.json` (global):
+
+```json
+{
+  "mcpServers": {
+    "getappniche": {
+      "url": "https://api.getappniche.com/mcp",
+      "headers": { "Authorization": "Bearer YOUR_API_KEY" }
+    }
+  }
+}
+```
+
+**Claude Desktop** — `claude_desktop_config.json`, then restart the app fully:
+
+```json
+{
+  "mcpServers": {
+    "getappniche": {
+      "command": "npx",
+      "args": ["-y", "@getappniche/mcp"],
+      "env": { "GETAPPNICHE_API_KEY": "YOUR_API_KEY" }
+    }
+  }
+}
+```
+
+**VS Code (Copilot agent mode)** — `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "getappniche": {
+      "type": "http",
+      "url": "https://api.getappniche.com/mcp",
+      "headers": { "Authorization": "Bearer YOUR_API_KEY" }
+    }
+  }
+}
+```
+
+**Windsurf** — `~/.codeium/windsurf/mcp_config.json` (the field is `serverUrl`):
+
+```json
+{
+  "mcpServers": {
+    "getappniche": {
+      "serverUrl": "https://api.getappniche.com/mcp",
+      "headers": { "Authorization": "Bearer YOUR_API_KEY" }
+    }
+  }
+}
+```
+
+**Codex CLI** — `~/.codex/config.toml`, then export `GETAPPNICHE_API_KEY`:
+
+```toml
+[mcp_servers.getappniche]
+url = "https://api.getappniche.com/mcp"
+bearer_token_env_var = "GETAPPNICHE_API_KEY"
+```
+
+**Gemini CLI** — `~/.gemini/settings.json` (the field is `httpUrl`):
+
+```json
+{
+  "mcpServers": {
+    "getappniche": {
+      "httpUrl": "https://api.getappniche.com/mcp",
+      "headers": { "Authorization": "Bearer YOUR_API_KEY" }
+    }
+  }
+}
+```
+
+Zed, Cline, Continue and JetBrains AI are covered too —
+[getappniche.com/mcp](https://getappniche.com/mcp) has every snippet.
+Companion agent skills:
 [`getappniche/aso-skills`](https://github.com/getappniche/aso-skills)
 (`npx skills add getappniche/aso-skills`).
+
+> ChatGPT and claude.ai on the web can't send a custom `Authorization` header
+> from their connector UI yet, so use one of the clients above. OAuth for those
+> is in progress.
 
 ## What's in this repo
 
