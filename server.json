@@ -7,7 +7,7 @@
     "url": "https://github.com/getappniche/mcp",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "remotes": [
     {
       "type": "streamable-http",
@@ -16,6 +16,25 @@
         {
           "name": "Authorization",
           "description": "Bearer <API key> — create at app.getappniche.com, Settings, API Keys",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@getappniche/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "GETAPPNICHE_API_KEY",
+          "description": "API key from app.getappniche.com, Settings, API Keys",
           "isRequired": true,
           "isSecret": true
         }
