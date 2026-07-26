@@ -151,12 +151,12 @@ to `api.getappniche.com` — nothing else, nowhere else.
 
 ## Tools
 
-- `search_apps` - Search and filter apps by store, category, text, ratings and growth (1 credit)
-- `get_app_detail` - Get one app by id, e.g. `apple:284882215` or `google:com.duolingo` (1 credit)
+- `search_apps` - Search apps across 25+ filters: store, categories, languages, price model, rating, reviews, downloads, revenue, release and update recency, review growth - sorted by any column (1 credit)
+- `get_app_detail` - Get one app by canonical id, bare Apple id, Android package name, or a pasted store URL (1 credit)
 - `get_app_historicals` - Metric time series: reviews, ratings, downloads, revenue (1 credit)
 - `get_keyword_difficulty` - Popularity, difficulty, traffic and opportunity for a keyword (10 credits)
 - `batch_keyword_difficulty` - Score up to 10 keywords, sorted by opportunity (10 credits per keyword)
-- `get_app_reviews` - Enriched review feed for apps monitored in your workspace (1 credit)
+- `get_app_reviews` - Live App Store reviews for any app by id or URL, or enriched rows for apps monitored in your workspace (1 credit)
 - `get_supported_countries` - List valid store country codes (free)
 
 Credits ship with a GetAppNiche plan (Pro: 5,000/month) and every result reports
@@ -169,8 +169,8 @@ Credits ship with a GetAppNiche plan (Pro: 5,000/month) and every result reports
   (bad id, out of credits) come back as tool results your agent can read.
 - The bridge honours `Mcp-Session-Id` and accepts both JSON and SSE-framed
   responses.
-- OAuth for clients whose connector UI can't set headers (ChatGPT, claude.ai
-  web) is in progress.
+- OAuth for clients whose connector UI can't set headers (claude.ai web) is
+  in progress; ChatGPT connects today with API-key auth.
 
 ## License
 

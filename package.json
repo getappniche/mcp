@@ -1,7 +1,7 @@
 {
   "name": "@getappniche/mcp",
-  "version": "0.1.0",
-  "description": "GetAppNiche MCP — live App Store & Google Play data for AI agents: app discovery, ASO keyword scoring, reviews. Zero-dependency stdio bridge to the hosted Streamable HTTP endpoint.",
+  "version": "0.1.1",
+  "description": "GetAppNiche MCP \u2014 live App Store & Google Play data for AI agents: app discovery, ASO keyword scoring, reviews. Zero-dependency stdio bridge to the hosted Streamable HTTP endpoint.",
   "type": "module",
   "bin": {
     "getappniche-mcp": "bin/cli.mjs"
