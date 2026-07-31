@@ -1,0 +1,7 @@
+# Local operational secrets (signing keys, API keys we need on this machine).
+# The folder's README IS tracked so a fresh clone knows what belongs there;
+# everything else in it never leaves this machine.
+secrets/*
+!secrets/README.md
+
+.DS_Store
