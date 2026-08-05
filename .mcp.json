@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "getappniche": {
+      "command": "npx",
+      "args": ["-y", "@getappniche/mcp"],
+      "env": {
+        "GETAPPNICHE_API_KEY": "${GETAPPNICHE_API_KEY}"
+      }
+    }
+  }
+}
