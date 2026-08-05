@@ -1,0 +1,17 @@
+{
+  "name": "getappniche",
+  "version": "0.1.2",
+  "description": "Live App Store & Google Play data for AI agents — app discovery, revenue and download estimates, ASO keyword difficulty, and reviews.",
+  "author": "GetAppNiche",
+  "homepage": "https://getappniche.com/mcp",
+  "repository": "https://github.com/getappniche/mcp",
+  "license": "MIT",
+  "keywords": [
+    "app-store",
+    "google-play",
+    "aso",
+    "keyword-research",
+    "mcp-server"
+  ],
+  "mcpServers": "./.mcp.json"
+}
